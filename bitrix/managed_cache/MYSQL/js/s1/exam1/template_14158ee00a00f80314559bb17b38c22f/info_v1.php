@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/templates/exam1/js/jquery.min.js" => "170601709995957","/bitrix/templates/exam1/js/owl.carousel.min.js" => "170601709940401","/bitrix/templates/exam1/js/scripts.js" => "17060170993482",]; ?>

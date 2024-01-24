@@ -1,0 +1,1 @@
+<?php $filesInfo = ["/bitrix/templates/exam1/css/reset.css" => "17060170972466","/bitrix/templates/exam1/css/owl.carousel.css" => "17060170974507","/bitrix/components/bitrix/system.show_message/templates/.default/style.css" => "170594485051","/bitrix/templates/exam1/styles.css" => "170601709361810",]; ?>
