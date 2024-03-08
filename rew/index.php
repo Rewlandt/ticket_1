@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Отзывы");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	"rew1", 
+	"rew", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -29,8 +29,9 @@ $APPLICATION->SetTitle("Отзывы");
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Отзывы",
 		"DETAIL_PROPERTY_CODE" => array(
-			0 => "",
-			1 => "",
+			0 => "POSITION",
+			1 => "COMPANY",
+			2 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
@@ -41,7 +42,7 @@ $APPLICATION->SetTitle("Отзывы");
 		"DISPLAY_TOP_PAGER" => "N",
 		"FILE_404" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "1",
+		"IBLOCK_ID" => "5",
 		"IBLOCK_TYPE" => "rew",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
@@ -64,7 +65,7 @@ $APPLICATION->SetTitle("Отзывы");
 		"PAGER_SHOW_ALL" => "N",
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Новости",
+		"PAGER_TITLE" => "Отзывы",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_MODE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
@@ -84,12 +85,12 @@ $APPLICATION->SetTitle("Отзывы");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => "rew1",
+		"COMPONENT_TEMPLATE" => "rew",
 		"SEF_FOLDER" => "/rew/",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",
-			"detail" => "#ELEMENT_ID#/",
+			"detail" => "#ELEMENT_CODE#/",
 		)
 	),
 	false

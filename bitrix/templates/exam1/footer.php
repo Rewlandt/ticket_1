@@ -183,7 +183,7 @@ use Bitrix\Main\Localization\Loc;
                 <div class="phone">
                     <?
                     $APPLICATION->IncludeFile(
-                        SITE_DIR . "include/phone.php",
+                        SITE_DIR . "/bitrix/templates/exam1/include/phone.php",
                         Array(),
                         Array("MODE" => "html")
                     );

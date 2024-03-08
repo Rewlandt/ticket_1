@@ -13,8 +13,9 @@
 $this->setFrameMode(true);
 $Img = SITE_TEMPLATE_PATH."/img/rew/no_photo.jpg";
 
-if (isset($arResult["DETAIL_PICTURE"]["SRC"]))
+if (isset($arResult["DETAIL_PICTURE"]["SRC"])){
 	$Img = $arResult["DETAIL_PICTURE"]["SRC"];
+}
 ?>
 
 <div class="review-block">
@@ -32,28 +33,34 @@ if (isset($arResult["DETAIL_PICTURE"]["SRC"]))
 						<div style="clear: both;" class="review-img-wrap">
 							<img src="<?=$arResult["DETAIL_PICTURE"]["SRC"];?>" alt="<?=$arResult["DETAIL_PICTURE"]["ALT"];?>">
 						</div>
-						</div>
+					</div>
 						<?php if ($arResult["PROPERTIES"]["FILE"]["VALUE"]) { ?>
 						<div class="exam-review-doc">
-						<p><?=GetMessage("TITLE_FILE"):?></p>
+						<p><?=GetMessage("TITLE_FILE");?></p>
 						<? foreach ($arResult["PROPERTIES"]["FILE"]["VALUE"] as $idFile) { ?>
 							<?php
-								$srcFile = $APPLICATION->GetPath($idFile);
-								$obFile = $APPLICATION->GetArrayByID($idFile);
+								$srcFile = CFILE::GetPath($idFile);
+								$obFile = CFILE::GetByID($idFile);
 								$arFile = $obFile->Fetch();
 							?>
 							<div  class="exam-review-item-doc">
 								<img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH;?>./img/icons/pdf_ico_40.png">
-								<a href="">Файл 1</a>
+								<a href="">
+									Файл 1
+								</a>
 							</div>
-						<div  class="exam-review-item-doc">
-							<img class="rew-doc-ico" src="./img/icons/pdf_ico_40.png">
-							<a href="">Файл 2</a>
-						</div>
-						<div  class="exam-review-item-doc">
-							<img class="rew-doc-ico" src="./img/icons/pdf_ico_40.png">
-							<a href="">Файл 3</a>
-						</div>
+							<!-- <div  class="exam-review-item-doc">
+								<img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH;?>./img/icons/pdf_ico_40.png">
+								<a href="">
+									Файл 2
+								</a>
+							</div>
+							<div  class="exam-review-item-doc">
+								<img class="rew-doc-ico" src="<?=SITE_TEMPLATE_PATH;?>./img/icons/pdf_ico_40.png">
+								<a href="">
+									Файл 3
+								</a>
+							</div> -->
 						<?php } ?>
 						</div>
 						<?php } ?>

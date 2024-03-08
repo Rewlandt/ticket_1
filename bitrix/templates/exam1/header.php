@@ -15,7 +15,7 @@ if ($sCurPage == "/") {
 
 // Проверка времени
 $iHours = (int)date("H");
-if ($iHours >= 9 && $iHours <= 18) {
+if ($iHours >= 9 && $iHours < 18) {
     $bIsWorkTime = true;
 }
 
@@ -57,7 +57,7 @@ if ($iHours >= 9 && $iHours <= 18) {
                 <? if ($bIsWorkTime): ?>
                     <?
                     $APPLICATION->IncludeFile(
-                        SITE_DIR . "include/phone.php",
+                        SITE_DIR . "/bitrix/templates/exam1/include/phone.php",
                         Array(),
                         Array("MODE" => "html")
                     );
@@ -65,7 +65,7 @@ if ($iHours >= 9 && $iHours <= 18) {
                 <? else: ?>
                     <?
                     $APPLICATION->IncludeFile(
-                        SITE_DIR . "include/email.php",
+                        SITE_DIR . "/bitrix/templates/exam1/include/email.php",
                         Array(),
                         Array("MODE" => "html")
                     );
